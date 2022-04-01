@@ -3,7 +3,7 @@
 ## 1. Taille de l'espace de recherche :
 
 On a le système d’équations suivant : <br>
-![Formules](https://raw.githubusercontent.com/ClementB-01/Projects-A3S6-Datascience-IA/master/Genetic_Algorithm/[Images\ Readme]/system.jpg)<br>
+![Formules](https://raw.githubusercontent.com/ClementB-01/Projects-A3S6-Datascience-IA/master/Genetic_Algorithm/[Images_Readme]/system.jpg)<br>
 Où ![Pi](http://www.sciweavers.org/tex2img.php?eq=p_%7Bi%7D%5C%20%7C%20%5C%20i%5Cin%5C%20%5B1%3B6%5D&bc=Black&fc=White&im=jpg&fs=12&ff=modern&edit=0) sont les paramètres du système.
 On sait que ces paramètres sont à valeurs dans [-100;100].
 On a donc : taille = ![](http://www.sciweavers.org/tex2img.php?eq=Card%28%5B-100%3B100%5D%29%5E%7Bn%7D&bc=Black&fc=White&im=jpg&fs=12&ff=modern&edit=0) , où n nombre de paramètres.<br>
