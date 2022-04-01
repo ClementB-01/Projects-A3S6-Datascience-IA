@@ -21,16 +21,18 @@ La fonction Fitness utilisée somme les distances de Manhattan entre les valeurs
 ## 3. Opérateurs mis en œuvre (mutation, croissement) :
 
 Les deux opérateurs mis en œuvre sont la fonction XOSubject() qui assure le croisement entre deux individus et la fonction MutateSubject() qui fait muter un individu.
-	La fonction de croisement 
-	```python 
-	XOSubject()``` :
+La fonction de croisement :	
+```python 
+XOSubject()
+```
 Elle assure un croisement entre deux individus pris en entrée. Elle existe en deux alternatives, un croisement simple qui va ajouter la moitié d’un premier individu et la moitié du deuxième, et un croisement double qui va ajouter le premier tier d’un individu, le deuxième tier du second et enfin le dernier tier du premier.
 Elle est dotée d’un paramètre strat qui permet soit de sélectionner le croisement simple : ‘1XO’, soit le double : ‘2XO’, soit d’utiliser les deux : ‘Mix’.
 Afin de randomiser la fonction, il y a également tirage au sort de l’individu qui sera premier et de celui qui sera second.
 
-La fonction de mutation 
-	```python 
-	MutateSubject()``` :
+La fonction de mutation :
+```python 
+MutateSubject()
+```
 Elle assure la mutation d’un individu pris en entrée.
 Elle tire au hasard deux pivots dans la liste de paramètres de l’individu.
 Elle existe en trois alternatives : une mutation par insertion du second pivot après le premier, une mutation par inversion des deux pivots, une mutation par inversion de la sous-liste de paramètres entre les deux pivots inclus, une mutation par insertion sur le premier pivot d’une valeur aléatoire.
