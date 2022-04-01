@@ -1,4 +1,4 @@
-# Recherche d'orbite de Lissajous par algorithme génétique ?
+# Recherche d'orbite de Lissajous par algorithme génétique
 
 ## 1. Taille de l'espace de recherche :
 
