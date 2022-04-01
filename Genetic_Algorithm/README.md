@@ -3,7 +3,7 @@
 ## 1. Taille de l'espace de recherche :
 
 On a le système d’équations suivant : <br>
-![Formules](http://www.sciweavers.org/tex2img.php?eq=%5Cbegin%7Bcases%7D%20x%28t%29%20%3D%20p_%7B1%7D%20%5Ctimes%20sin%28p_%7B2%7D%5Ctimes%20t%20%2B%20p_%7B3%7D%29%5C%5C%20y%28t%29%20%3D%20p_%7B4%7D%20%5Ctimes%20sin%28p_%7B5%7D%20%5Ctimes%20t%20%2B%20p_%7B6%7D%29%5Cend%7Bcases%7D&bc=Black&fc=White&im=jpg&fs=12&ff=modern&edit=0)<br>
+![Formules]([images Readme]/system.png)<br>
 Où ![Pi](http://www.sciweavers.org/tex2img.php?eq=p_%7Bi%7D%5C%20%7C%20%5C%20i%5Cin%5C%20%5B1%3B6%5D&bc=Black&fc=White&im=jpg&fs=12&ff=modern&edit=0) sont les paramètres du système.
 On sait que ces paramètres sont à valeurs dans [-100;100].
 On a donc : taille = ![](http://www.sciweavers.org/tex2img.php?eq=Card%28%5B-100%3B100%5D%29%5E%7Bn%7D&bc=Black&fc=White&im=jpg&fs=12&ff=modern&edit=0) , où n nombre de paramètres.<br>
