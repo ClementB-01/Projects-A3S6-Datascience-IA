@@ -64,8 +64,8 @@ Au niveau des croisements et des mutations, on a adopté les systèmes mixtes su
 On a également modifié les différents paramètres qui régissent le nombre d’individu qui passe d’une génération à l’autre sans changement, le nombre d’individus issu de croisement et le nombre d’individus issu de mutations.
 
 
-Meilleure solution : 
-Fitness = 20,58 soit 0,343 lorsqu’on la normalise par le nombre d’opérations d’additions.
-Points : -13.693;-21.113;-20.862;21.831;41.102;22.874
+Meilleure solution : <br>
+Fitness = 20,58 soit 0,343 lorsqu’on la normalise par le nombre d’opérations d’additions. <br>
+Points : -13.693;-21.113;-20.862;21.831;41.102;22.874 <br>
 
 [Back to top](#readme)
