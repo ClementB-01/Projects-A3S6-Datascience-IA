@@ -4,14 +4,14 @@
 
 On a le système d’équations suivant : <br>
 ![Formules](http://www.sciweavers.org/tex2img.php?eq=%5Cbegin%7Bcases%7D%20x%28t%29%20%3D%20p_%7B1%7D%20%5Ctimes%20sin%28p_%7B2%7D%5Ctimes%20t%20%2B%20p_%7B3%7D%29%5C%5C%20y%28t%29%20%3D%20p_%7B4%7D%20%5Ctimes%20sin%28p_%7B5%7D%20%5Ctimes%20t%20%2B%20p_%7B6%7D%29%5Cend%7Bcases%7D&bc=Black&fc=White&im=jpg&fs=12&ff=modern&edit=0)<br>
-Où p_i\ ,\ i\in\ [1;6] sont les paramètres du système.
+Où ![Pi](http://www.sciweavers.org/tex2img.php?eq=p_%7Bi%7D%5C%20%7C%20%5C%20i%5Cin%5C%20%5B1%3B6%5D&bc=Black&fc=White&im=jpg&fs=12&ff=modern&edit=0) sont les paramètres du système.
 On sait que ces paramètres sont à valeurs dans [-100;100].
-On a donc : taille = (Card([-100;100]))n , où n nombre de paramètres.
-Si on considère l’espace de recherche comme continu alors sa taille sera infinie.
+On a donc : taille = ![](http://www.sciweavers.org/tex2img.php?eq=Card%28%5B-100%3B100%5D%29%5E%7Bn%7D&bc=Black&fc=White&im=jpg&fs=12&ff=modern&edit=0) , où n nombre de paramètres.<br>
+Si on considère l’espace de recherche comme continu alors sa taille sera infinie.<br>
 On le considère donc comme discret. 
-Sur l’espace entier entre [-100;100] on a : (Card([[-100;100]]))6 = 2006
-Pour chaque pas décimal ajouter il faut multiplier le Card([-100;100]) par 10.
-Pour 3 nombres après la virgule on a : (Card([-100;100])×103)6 = (200×103)6
+Sur l’espace entier entre [-100;100] on a : ![(Card([[-100;100]]))^6 = 200^6](http://www.sciweavers.org/tex2img.php?eq=Card%28%5B%5B-100%3B100%5D%5D%29%5E%7B6%7D%20%3D%20200%5E%7B6%7D&bc=Black&fc=White&im=jpg&fs=12&ff=modern&edit=0=^)
+Pour chaque pas décimal ajouter il faut multiplier le ![Card([-100;100]) par 10](http://www.sciweavers.org/tex2img.php?eq=Card%28%5B%5B-100%3B100%5D%5D%29&bc=Black&fc=White&im=jpg&fs=12&ff=modern&edit=0).
+Pour 3 nombres après la virgule on a : ![(Card([-100;100])×10^3)^6 = (200×10^3)^6](http://www.sciweavers.org/tex2img.php?eq=%28Card%28%5B-100%3B100%5D%29%20%5Ctimes%2010%5E%7B3%7D%29%5E%7B6%7D%20%3D%20%28200%20%5Ctimes%2010%5E%7B3%7D%29%5E%7B6%7D&bc=Black&fc=White&im=jpg&fs=12&ff=modern&edit=0)
 La taille de l’espace de recherche est donc de {\ (200\times{10}^3)}^6 soit environ 64 000 milliards de milliards de milliards de possibilités.
 ## 2. Fonction fitness :
 
