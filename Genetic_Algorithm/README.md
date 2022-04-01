@@ -8,7 +8,7 @@ Où ![Pi](https://raw.githubusercontent.com/ClementB-01/Projects-A3S6-Datascienc
 On sait que ces paramètres sont à valeurs dans [-100;100]. <br>
 On a donc : taille = ![](https://raw.githubusercontent.com/ClementB-01/Projects-A3S6-Datascience-IA/master/Genetic_Algorithm/[Images_Readme]/cardn.jpg) , où n nombre de paramètres.<br>
 Si on considère l’espace de recherche comme continu alors sa taille sera infinie.<br>
-On le considère donc comme discret. 
+On le considère donc comme discret.
 Sur l’espace entier entre [-100;100] on a : ![(Card([[-100;100]]))^6 = 200^6](https://raw.githubusercontent.com/ClementB-01/Projects-A3S6-Datascience-IA/master/Genetic_Algorithm/[Images_Readme]/card6.jpg) <br>
 Pour chaque pas décimal ajouter il faut multiplier le ![Card([-100;100])](https://raw.githubusercontent.com/ClementB-01/Projects-A3S6-Datascience-IA/master/Genetic_Algorithm/[Images_Readme]/card.jpg) par 10.<br>
 Pour 3 nombres après la virgule on a : ![(Card([-100;100])×10^3)^6 = (200×10^3)^6](https://raw.githubusercontent.com/ClementB-01/Projects-A3S6-Datascience-IA/master/Genetic_Algorithm/[Images_Readme]/card63.jpg)<br>
