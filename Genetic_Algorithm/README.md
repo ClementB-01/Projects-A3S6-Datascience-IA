@@ -3,12 +3,7 @@
 ## 1. Taille de l'espace de recherche :
 
 On a le système d’équations suivant : <br>
-```latex 
-xt=p1×sinp2×t+p3 y(t)=p4×sin(p5×t+p6)
-```
-```latex 
-f(n)=\begin{cases} \frac{n}{2}, & \text{si }n\text{ est pair} \\ 3n+1, & \text{si }n\text{ est impair} \end{cases}
-```
+![Formules](URL "https://latex.codecogs.com/svg.image?\begin{cases}&space;x(t)&space;=&space;p_{1}&space;\times&space;sin(p_{2}\times&space;t&space;&plus;&space;p_{3})\\&space;y(t)&space;=&space;p_{4}&space;\times&space;sin(p_{5}&space;\times&space;t&space;&plus;&space;p_{6})\end{cases}")
 Où p_i\ ,\ i\in\ [1;6] sont les paramètres du système.
 On sait que ces paramètres sont à valeurs dans [-100;100].
 On a donc : taille = (Card([-100;100]))n , où n nombre de paramètres.
