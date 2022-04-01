@@ -26,7 +26,7 @@ La fonction de croisement :
 XOSubject()
 ```
 Elle assure un croisement entre deux individus pris en entrée. Elle existe en deux alternatives, un croisement simple qui va ajouter la moitié d’un premier individu et la moitié du deuxième, et un croisement double qui va ajouter le premier tier d’un individu, le deuxième tier du second et enfin le dernier tier du premier.
-Elle est dotée d’un paramètre strat qui permet soit de sélectionner le croisement simple : ‘1XO’, soit le double : ‘2XO’, soit d’utiliser les deux : ‘Mix’.
+Elle est dotée d’un paramètre strat qui permet soit de sélectionner le croisement simple : `1XO`, soit le double : `2XO`, soit d’utiliser les deux : `Mix`.
 Afin de randomiser la fonction, il y a également tirage au sort de l’individu qui sera premier et de celui qui sera second.
 
 La fonction de mutation :
@@ -36,7 +36,7 @@ MutateSubject()
 Elle assure la mutation d’un individu pris en entrée.
 Elle tire au hasard deux pivots dans la liste de paramètres de l’individu.
 Elle existe en trois alternatives : une mutation par insertion du second pivot après le premier, une mutation par inversion des deux pivots, une mutation par inversion de la sous-liste de paramètres entre les deux pivots inclus, une mutation par insertion sur le premier pivot d’une valeur aléatoire.
-Elle est dotée d’un paramètre strat qui permet soit de sélectionner la mutation par insertion : ‘Insertion’, soit la mutation par inversion : ‘Swap’, soit la mutation par inversion de la sous-liste : ‘Reversion’, soit l’insertion d’une nouvelle valeur au hasard : ‘Random’, ou bien d’utiliser les quatre : ‘Mix’.
+Elle est dotée d’un paramètre strat qui permet soit de sélectionner la mutation par insertion : `Insertion`, soit la mutation par inversion : `Swap`, soit la mutation par inversion de la sous-liste : `Reversion`, soit l’insertion d’une nouvelle valeur au hasard : `Random`, ou bien d’utiliser les quatre : `Mix`.
 
 ## 4. Processus de sélection :
 
