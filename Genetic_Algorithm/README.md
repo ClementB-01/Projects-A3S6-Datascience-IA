@@ -31,7 +31,7 @@ Afin de randomiser la fonction, il y a également tirage au sort de l’individu
 
 La fonction de mutation :
 ```python 
-MutateSubject()
+MutateSubject() 
 ```
 Elle assure la mutation d’un individu pris en entrée.
 Elle tire au hasard deux pivots dans la liste de paramètres de l’individu.
