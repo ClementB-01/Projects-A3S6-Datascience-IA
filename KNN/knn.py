@@ -1,0 +1,108 @@
+# KNN Algorithmn
+
+from itertools import count
+from unittest import result
+
+
+def DistanceMatrix(list_coord, vector_coord):
+    distance_matrix = []
+    for i in range(len(list_coord)):
+        t = (Distance(list_coord[i][:-1], vector_coord), list_coord[i][-1])
+        distance_matrix.append(t) # On Slice la liste pour éviter que la var qualitative soit dans le calcul de distance
+    return distance_matrix
+
+def Distance(list_x, list_y):
+    distance = 0
+    for i in range(len(list_y)):
+        distance += abs(float(list_x[i]) - float(list_y[i]))
+    return distance
+
+
+def LoadDatas(path, test_data = False, verif = False): # FONCTIONNELLE EN TEST UNITAIRE
+    file = open(path, 'r')
+    data = []
+    for i in file:
+        i = [x.split(';') for x in i.split()]
+        i = ConvertFloat(i)
+        if verif:
+            data.extend(i[-1:])
+        else:
+            if test_data: # Dans le cas d'un dataset de test on ne charge pas la var qualitative
+                data.append(i[:-1])
+            else:
+                data.append(i)
+    return data
+
+def ConvertFloat(data):
+    datareturn = []
+    for i in range(len(data[0])):
+        dataadd = float(data[0][i])
+        datareturn.append(dataadd)
+    return datareturn
+
+def CreateMatrix(hauteur, largeur):
+    B = []
+    for i in range(hauteur):
+        A = []
+        for j in range(largeur):
+            A.append(0)
+        B.append(A)
+    return B
+
+def FindClosestValue(k, distance_matrix):
+    result = -1
+    ligne = distance_matrix
+    ligne = sorted(ligne, key = lambda var: var[0]) # On réalise le tri sur la première valeur du tuple qui correspond à la distance
+    selection = list()
+    for i in range(k+1):
+        selection.append(ligne[i][1]) # On insère les var qualitatives dans une liste
+    if selection.count(0) < selection.count(1):
+        result = 1
+    elif selection.count(0) > selection.count(1):
+        result = 0
+    else:
+        selection.append(ligne[k+1][1])
+        result = 0 if selection.count(0) > selection.count(1) else 1 
+    return result
+
+def Eval(result):
+    data_verif  = LoadDatas("verif2.txt", verif = True)
+    compteur = 0
+    precent = 0
+    for i in range(len(data_verif)):
+        if result[i] == data_verif[i]:
+            compteur += 1
+    print(f"Le pourcentage de précision est de {compteur/len(result)*100} %")
+    #print(data_verif)
+
+def ConfusionMatrix(result):
+    data_verif  = LoadDatas("verif2.txt", verif = True)
+    confusion = {"Vrai 0 : " : 0, "Faux 0 : " : 0, "Vrai 1 : " : 0, "Faux 1 : " : 0}
+    for i in range(len(data_verif)):
+        if result[i] == data_verif[i]: # Cas des vrais valeurs
+            if result[i] == 1:
+                confusion["Vrai 1 : "] += 1
+            else:
+                confusion["Vrai 0 : "] += 1
+        else: # Cas des valuers fausses
+            if result[i] == 1:
+                confusion["Faux 1 : "] += 1
+            else:
+                confusion["Faux 0 : "] += 1
+    print(confusion)
+
+def Main():
+    data_train = LoadDatas("data .txt")
+    data_test = LoadDatas("preTest.txt", test_data = True)
+    print("Bienvenue sur cet algorithme du KNN")
+    print("Veuillez entrer le nombre de voisin k pris en compte : ")
+    k = input("->  ")
+    result = []
+    for i in data_test:
+        distance_matrix = DistanceMatrix(data_train, i)
+        result.append(FindClosestValue(int(k), distance_matrix))
+    Eval(result)
+    ConfusionMatrix(result)
+    # print(data_test)
+
+Main()
